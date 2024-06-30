@@ -1,0 +1,46 @@
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/prescricoes")
+public class PrescricaoController {
+
+    private final PrescricaoService prescricaoService;
+
+    @Autowired
+    public PrescricaoController(PrescricaoService prescricaoService) {
+        this.prescricaoService = prescricaoService;
+    }
+
+    @GetMapping
+    public List<PrescricaoDto> getAllPrescricoes() {
+        return prescricaoService.convertToDtoList(prescricaoService.findAll());
+    }
+
+    @GetMapping("/{id}")
+    public PrescricaoDto getPrescricaoById(@PathVariable Long id) {
+        return prescricaoService.findById(id)
+                .map(prescricaoService::convertToDto)
+                .orElse(null);
+    }
+
+    @PostMapping
+    public PrescricaoDto createPrescricao(@RequestBody PrescricaoDto prescricaoDto) {
+        Prescricao prescricao = prescricaoService.convertToEntity(prescricaoDto);
+        return prescricaoService.convertToDto(prescricaoService.save(prescricao));
+    }
+
+    @PutMapping("/{id}")
+    public PrescricaoDto updatePrescricao(@PathVariable Long id, @RequestBody PrescricaoDto prescricaoDto) {
+        Prescricao prescricao = prescricaoService.convertToEntity(prescricaoDto);
+        prescricao.setId(id);
+        return prescricaoService.convertToDto(prescricaoService.save(prescricao));
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletePrescricao(@PathVariable Long id) {
+        prescricaoService.deleteById(id);
+    }
+}
