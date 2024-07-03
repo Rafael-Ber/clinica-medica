@@ -1,0 +1,113 @@
+package br.edu.imepac.dto;
+
+public class PrescricaoDto {
+
+    private Long id;
+    private Long prontuarioId;
+    private String medicamento;
+    private String dosagem;
+    private String frequencia;
+    private String duracao;
+
+    // Construtores
+    public PrescricaoDto() {
+    }
+
+    public PrescricaoDto(Long id, Long prontuarioId, String medicamento, String dosagem, String frequencia, String duracao) {
+        this.id = id;
+        this.prontuarioId = prontuarioId;
+        this.medicamento = medicamento;
+        this.dosagem = dosagem;
+        this.frequencia = frequencia;
+        this.duracao = duracao;
+    }
+
+    // Getters e Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getProntuarioId() {
+        return prontuarioId;
+    }
+
+    public void setProntuarioId(Long prontuarioId) {
+        this.prontuarioId = prontuarioId;
+    }
+
+    public String getMedicamento() {
+        return medicamento;
+    }
+
+    public void setMedicamento(String medicamento) {
+        this.medicamento = medicamento;
+    }
+
+    public String getDosagem() {
+        return dosagem;
+    }
+
+    public void setDosagem(String dosagem) {
+        this.dosagem = dosagem;
+    }
+
+    public String getFrequencia() {
+        return frequencia;
+    }
+
+    public void setFrequencia(String frequencia) {
+        this.frequencia = frequencia;
+    }
+
+    public String getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(String duracao) {
+        this.duracao = duracao;
+    }
+
+    // equals e hashCode
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        PrescricaoDto that = (PrescricaoDto) o;
+
+        if (!id.equals(that.id)) return false;
+        if (!prontuarioId.equals(that.prontuarioId)) return false;
+        if (!medicamento.equals(that.medicamento)) return false;
+        if (!dosagem.equals(that.dosagem)) return false;
+        if (!frequencia.equals(that.frequencia)) return false;
+        return duracao.equals(that.duracao);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + prontuarioId.hashCode();
+        result = 31 * result + medicamento.hashCode();
+        result = 31 * result + dosagem.hashCode();
+        result = 31 * result + frequencia.hashCode();
+        result = 31 * result + duracao.hashCode();
+        return result;
+    }
+
+    // toString
+    @Override
+    public String toString() {
+        return "PrescricaoDto{" +
+                "id=" + id +
+                ", prontuarioId=" + prontuarioId +
+                ", medicamento='" + medicamento + '\'' +
+                ", dosagem='" + dosagem + '\'' +
+                ", frequencia='" + frequencia + '\'' +
+                ", duracao='" + duracao + '\'' +
+                '}';
+    }
+}

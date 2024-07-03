@@ -1,0 +1,350 @@
+GET http://localhost:8080/api/usuarios/1
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T124747.500.json
+
+###
+
+GET http://localhost:8080/api/usuarios
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T124738.404.json
+
+###
+
+GET http://localhost:8080/prontuarios
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T005417.404.json
+
+###
+
+GET http://localhost:8082/prontuarios
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T005413.404.json
+
+###
+
+GET http://localhost:8081/prontuarios
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T005402.404.json
+
+###
+
+POST http://localhost:8082/api/pacientes
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T005129.400.json
+
+###
+
+POST http://localhost:8081/api/pacientes
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T005124.400.json
+
+###
+
+POST http://localhost:8080/api/pacientes
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T005105.400.json
+
+###
+
+POST http://localhost:8082/api/agendamentos
+Content-Type: application/json
+Content-Length: 147
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "paciente": { "id": 2 },
+  "medico": { "id": 3 },
+  "dataAgendamento": "2024-10-10",
+  "horaAgendamento": "10:00:00",
+  "status": { "id": 2 }
+}
+
+<> 2024-07-03T004931.201.json
+
+###
+
+POST http://localhost:8081/api/agendamentos
+Content-Type: application/json
+Content-Length: 147
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "paciente": { "id": 2 },
+  "medico": { "id": 3 },
+  "dataAgendamento": "2024-10-10",
+  "horaAgendamento": "10:00:00",
+  "status": { "id": 2 }
+}
+
+<> 2024-07-03T004923.404.json
+
+###
+
+POST http://localhost:8080/api/agendamentos
+Content-Type: application/json
+Content-Length: 147
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "paciente": { "id": 2 },
+  "medico": { "id": 3 },
+  "dataAgendamento": "2024-10-10",
+  "horaAgendamento": "10:00:00",
+  "status": { "id": 2 }
+}
+
+<> 2024-07-03T004917.400.json
+
+###
+
+POST http://localhost:8080/api/agendamentos
+Content-Type: application/json
+Content-Length: 147
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "paciente": { "id": 1 },
+  "medico": { "id": 1 },
+  "dataAgendamento": "2024-10-10",
+  "horaAgendamento": "10:00:00",
+  "status": { "id": 1 }
+}
+
+<> 2024-07-03T004857.400.json
+
+###
+
+POST http://localhost:8080/api/agendamentos
+Content-Type: application/json
+Content-Length: 165
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "paciente": {
+    "id": 6
+  },
+  "medico": {
+    "id": 4
+  },
+  "dataAgendamento": "2024-10-10",
+  "horaAgendamento": "10:00:00",
+  "status": {
+    "id": 1
+  }
+}
+
+<> 2024-07-03T004719.400.json
+
+###
+
+GET http://localhost:8080/api/agendamentos/2
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T004643.500.json
+
+###
+
+GET http://localhost:8080/api/agendamentos/1
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T004635.500.json
+
+###
+
+DELETE http://localhost:8082/api/status-agendamento/5
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T004300.500.json
+
+###
+
+GET http://localhost:8082/api/status-agendamento
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 46
+
+{
+  "id": 0,
+  "nome": "",
+  "descricao": ""
+}
+
+<> 2024-07-03T004212.200.json
+
+###
+
+GET http://localhost:8080/api/horarios-atendimento
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T004145.200.json
+
+###
+
+GET http://localhost:8080/api/medicos
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 167
+
+{
+  "id": 6,
+  "nome": "rafael",
+  "especialidade": "pedriatra",
+  "dataNascimento": "08/11/1994",
+  "telefone": "34 997113710",
+  "email": "paladepreto@hotmail.com"
+}
+
+<> 2024-07-03T004043.200.json
+
+###
+
+GET http://localhost:8080/api/medicos
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 167
+
+{
+  "id": 6,
+  "nome": "rafael",
+  "especialidade": "pedriatra",
+  "dataNascimento": "08/11/1994",
+  "telefone": "34 997113710",
+  "email": "paladepreto@hotmail.com"
+}
+
+<> 2024-07-03T004032.200.json
+
+###
+
+GET http://localhost:8080/api/medicos
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 107
+
+{
+  "id": 0,
+  "nome": "",
+  "especialidade": "",
+  "dataNascimento": "",
+  "telefone": "",
+  "email": ""
+}
+
+<> 2024-07-03T003924.200.json
+
+###
+
+GET http://localhost:8082/api/usuarios
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T003818.404.json
+
+###
+
+GET http://localhost:8081/api/usuarios
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T003813.404.json
+
+###
+
+GET http://localhost:8080/api/usuarios
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T003716.404.json
+
+###
+
+GET http://localhost:8081/api/prescricoes
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-03T003057.200.json
+
+###
+

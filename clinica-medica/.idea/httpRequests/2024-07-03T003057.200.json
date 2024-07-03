@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "prontuarioId": 1,
+    "medicamento": "Anti-hipertensivo",
+    "dosagem": "10mg",
+    "frequencia": "1 vez ao dia",
+    "duracao": "1 mês"
+  },
+  {
+    "id": 2,
+    "prontuarioId": 2,
+    "medicamento": "Metformina",
+    "dosagem": "500mg",
+    "frequencia": "2 vezes ao dia",
+    "duracao": "6 meses"
+  },
+  {
+    "id": 3,
+    "prontuarioId": 3,
+    "medicamento": "Pomada",
+    "dosagem": "Aplicar 2x ao dia",
+    "frequencia": "2 vezes ao dia",
+    "duracao": "2 semanas"
+  },
+  {
+    "id": 4,
+    "prontuarioId": 4,
+    "medicamento": "Analgésico",
+    "dosagem": "1 comprimido",
+    "frequencia": "3 vezes ao dia",
+    "duracao": "1 semana"
+  },
+  {
+    "id": 5,
+    "prontuarioId": 5,
+    "medicamento": "Imobilizador",
+    "dosagem": "Imobilizar por 3 semanas",
+    "frequencia": "N/A",
+    "duracao": "3 semanas"
+  }
+]

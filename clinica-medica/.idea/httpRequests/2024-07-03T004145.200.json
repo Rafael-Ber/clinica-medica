@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "inicioAtendimento": "08:00:00",
+    "fimAtendimento": "12:00:00",
+    "diaSemana": "segunda"
+  },
+  {
+    "id": 2,
+    "inicioAtendimento": "08:00:00",
+    "fimAtendimento": "12:00:00",
+    "diaSemana": "terça"
+  },
+  {
+    "id": 3,
+    "inicioAtendimento": "08:00:00",
+    "fimAtendimento": "12:00:00",
+    "diaSemana": "quarta"
+  },
+  {
+    "id": 4,
+    "inicioAtendimento": "08:00:00",
+    "fimAtendimento": "12:00:00",
+    "diaSemana": "quinta"
+  },
+  {
+    "id": 5,
+    "inicioAtendimento": "08:00:00",
+    "fimAtendimento": "12:00:00",
+    "diaSemana": "sexta"
+  }
+]

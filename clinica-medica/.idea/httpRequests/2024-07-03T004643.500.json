@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-07-03T03:46:43.735+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/api/agendamentos/2"
+}
