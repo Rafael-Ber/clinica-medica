@@ -5,6 +5,9 @@ import br.edu.imepac.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.*;
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/usuarios") // Endpoint para API REST
 public class UsuarioController {
@@ -16,14 +19,25 @@ public class UsuarioController {
         this.usuarioRepository = usuarioRepository;
     }
 
+    @PostMapping
+    public Usuario post(@RequestBody Usuario usuario) {
+        return usuarioRepository.save(usuario);
+    }
+
+    @GetMapping
+    public List <Usuario> findAll () {
+        return usuarioRepository.findAll();
+    }
+
+
     @GetMapping("/{id}")
-    public Usuario detalhesUsuario(@PathVariable Long id) {
+    public Usuario detalhesUsuario(@PathVariable ("id") Long id) {
         return usuarioRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Usuário inválido: " + id));
     }
 
     @PutMapping("/{id}")
-    public Usuario editarUsuario(@PathVariable Long id, @RequestBody Usuario usuarioAtualizado) {
+    public Usuario editarUsuario(@PathVariable ("id")Long id, @RequestBody Usuario usuarioAtualizado) {
         Usuario usuario = usuarioRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Usuário inválido: " + id));
 
@@ -37,7 +51,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public void deletarUsuario(@PathVariable Long id) {
+    public void deletarUsuario(@PathVariable ("id") Long id) {
         usuarioRepository.deleteById(id);
     }
 }
