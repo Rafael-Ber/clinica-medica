@@ -1,6 +1,6 @@
 package br.edu.imepac.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -26,13 +26,13 @@ public class Agendamento {
     @Column(name = "hora_agendamento", nullable = false)
     private LocalTime horaAgendamento;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "status_id", nullable = false)
     private StatusAgendamento status;
 
-    // Construtores, getters e setters, equals, hashCode, toString
-
+    // Construtores
     public Agendamento() {
+        // Inicializações padrão, se necessário
     }
 
     public Agendamento(Paciente paciente, Medico medico, LocalDate dataAgendamento, LocalTime horaAgendamento, StatusAgendamento status) {
@@ -43,8 +43,56 @@ public class Agendamento {
         this.status = status;
     }
 
-    // Getters e Setters omitidos para brevidade
+    // Getters e Setters
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public LocalDate getDataAgendamento() {
+        return dataAgendamento;
+    }
+
+    public void setDataAgendamento(LocalDate dataAgendamento) {
+        this.dataAgendamento = dataAgendamento;
+    }
+
+    public LocalTime getHoraAgendamento() {
+        return horaAgendamento;
+    }
+
+    public void setHoraAgendamento(LocalTime horaAgendamento) {
+        this.horaAgendamento = horaAgendamento;
+    }
+
+    public StatusAgendamento getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusAgendamento status) {
+        this.status = status;
+    }
+
+    // Métodos Equals, HashCode e ToString
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,12 +100,12 @@ public class Agendamento {
 
         Agendamento that = (Agendamento) o;
 
-        return id.equals(that.id);
+        return id != null && id.equals(that.id);
     }
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override

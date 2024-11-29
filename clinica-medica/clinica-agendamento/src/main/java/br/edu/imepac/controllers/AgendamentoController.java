@@ -30,7 +30,7 @@ public class AgendamentoController {
     @GetMapping("/{id}")
     public ResponseEntity<Agendamento> getAgendamentoById(@PathVariable Long id) {
         Optional<Agendamento> agendamento = agendamentoService.findById(id);
-        return agendamento.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        return agendamento.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
@@ -44,7 +44,7 @@ public class AgendamentoController {
         if (!agendamentoService.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
-        agendamento.setId(id);
+        agendamento.setId(id); // Garante que o ID do agendamento está definido corretamente
         Agendamento updatedAgendamento = agendamentoService.save(agendamento);
         return ResponseEntity.ok(updatedAgendamento);
     }

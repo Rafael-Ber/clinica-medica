@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-07-03T03:48:57.361+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/api/agendamentos"
+}

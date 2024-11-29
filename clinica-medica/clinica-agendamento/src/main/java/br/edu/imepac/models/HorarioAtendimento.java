@@ -1,6 +1,7 @@
 package br.edu.imepac.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
@@ -26,8 +27,6 @@ public class HorarioAtendimento {
     @Column(name = "hora_fim", nullable = false)
     private LocalTime horaFim;
 
-    // Construtores, getters e setters, equals, hashCode, toString
-
     public HorarioAtendimento() {
     }
 
@@ -38,7 +37,45 @@ public class HorarioAtendimento {
         this.horaFim = horaFim;
     }
 
-    // Getters e Setters omitidos para brevidade
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public DayOfWeek getDiaSemana() {
+        return diaSemana;
+    }
+
+    public void setDiaSemana(DayOfWeek diaSemana) {
+        this.diaSemana = diaSemana;
+    }
+
+    public LocalTime getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(LocalTime horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
+    public LocalTime getHoraFim() {
+        return horaFim;
+    }
+
+    public void setHoraFim(LocalTime horaFim) {
+        this.horaFim = horaFim;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -47,12 +84,12 @@ public class HorarioAtendimento {
 
         HorarioAtendimento that = (HorarioAtendimento) o;
 
-        return id.equals(that.id);
+        return id != null && id.equals(that.id);
     }
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override

@@ -1,0 +1,27 @@
+{
+  "id": 6,
+  "paciente": {
+    "id": 2,
+    "nome": null,
+    "cpf": null,
+    "rg": null,
+    "dataNascimento": null,
+    "telefone": null,
+    "email": null,
+    "endereco": null
+  },
+  "medico": {
+    "id": 3,
+    "nome": null,
+    "especialidade": null,
+    "telefone": null,
+    "email": null
+  },
+  "dataAgendamento": "2024-10-10",
+  "horaAgendamento": "10:00:00",
+  "status": {
+    "id": 2,
+    "nome": null,
+    "descricao": null
+  }
+}

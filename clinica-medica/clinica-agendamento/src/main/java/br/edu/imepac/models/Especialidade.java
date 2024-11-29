@@ -1,6 +1,6 @@
 package br.edu.imepac.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "especialidade")
@@ -15,8 +15,7 @@ public class Especialidade {
 
     private String descricao;
 
-    // Construtores, getters e setters, equals, hashCode, toString
-
+    // Construtores
     public Especialidade() {
     }
 
@@ -25,8 +24,32 @@ public class Especialidade {
         this.descricao = descricao;
     }
 
-    // Getters e Setters omitidos para brevidade
+    // Getters e Setters
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    // Métodos equals, hashCode e toString
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

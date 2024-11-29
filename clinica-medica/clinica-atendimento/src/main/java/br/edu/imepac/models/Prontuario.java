@@ -1,0 +1,130 @@
+package br.edu.imepac.models;
+
+import jakarta.persistence.*;
+import java.time.LocalDate;
+import java.util.Objects;
+
+@Entity
+public class Prontuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "paciente_id", nullable = false)
+    private Paciente paciente;
+
+    @ManyToOne
+    @JoinColumn(name = "medico_id", nullable = false)
+    private Medico medico;
+
+    private LocalDate dataAtendimento;
+    private String diagnostico;
+    private String tratamento;
+    private String observacoes;
+
+    // Construtores
+    public Prontuario() {
+    }
+
+    public Prontuario(Paciente paciente, Medico medico, LocalDate dataAtendimento, String diagnostico, String tratamento, String observacoes) {
+        this.paciente = paciente;
+        this.medico = medico;
+        this.dataAtendimento = dataAtendimento;
+        this.diagnostico = diagnostico;
+        this.tratamento = tratamento;
+        this.observacoes = observacoes;
+    }
+
+    // Getters e Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public LocalDate getDataAtendimento() {
+        return dataAtendimento;
+    }
+
+    public void setDataAtendimento(LocalDate dataAtendimento) {
+        this.dataAtendimento = dataAtendimento;
+    }
+
+    public String getDiagnostico() {
+        return diagnostico;
+    }
+
+    public void setDiagnostico(String diagnostico) {
+        this.diagnostico = diagnostico;
+    }
+
+    public String getTratamento() {
+        return tratamento;
+    }
+
+    public void setTratamento(String tratamento) {
+        this.tratamento = tratamento;
+    }
+
+    public String getObservacoes() {
+        return observacoes;
+    }
+
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
+    }
+
+    // equals e hashCode
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Prontuario that = (Prontuario) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(paciente, that.paciente) &&
+                Objects.equals(medico, that.medico) &&
+                Objects.equals(dataAtendimento, that.dataAtendimento) &&
+                Objects.equals(diagnostico, that.diagnostico) &&
+                Objects.equals(tratamento, that.tratamento) &&
+                Objects.equals(observacoes, that.observacoes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, paciente, medico, dataAtendimento, diagnostico, tratamento, observacoes);
+    }
+
+    // toString
+    @Override
+    public String toString() {
+        return "Prontuario{" +
+                "id=" + id +
+                ", paciente=" + paciente +
+                ", medico=" + medico +
+                ", dataAtendimento=" + dataAtendimento +
+                ", diagnostico='" + diagnostico + '\'' +
+                ", tratamento='" + tratamento + '\'' +
+                ", observacoes='" + observacoes + '\'' +
+                '}';
+    }
+}

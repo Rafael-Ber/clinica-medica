@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "nome": "Confirmado",
+    "descricao": "Agendamento confirmado"
+  },
+  {
+    "id": 2,
+    "nome": "Pendente",
+    "descricao": "Agendamento pendente"
+  },
+  {
+    "id": 3,
+    "nome": "Cancelado",
+    "descricao": "Agendamento cancelado"
+  },
+  {
+    "id": 4,
+    "nome": "Realizado",
+    "descricao": "Agendamento realizado"
+  },
+  {
+    "id": 5,
+    "nome": "Reagendado",
+    "descricao": "Agendamento reagendado"
+  }
+]
